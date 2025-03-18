@@ -1,19 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@488&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@488&family=Play:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 html {
-    background-color: rgb(231, 185, 130);
+    background-color: rgb(104, 104, 104);
+}
+
+
+
+.UI {
+    font-family: "Play", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roundAndWins {
+    font-family: "Play", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    font-style: normal;
 }
 
 #userWins {
     padding-top: 20px;
-}
-
-.UI {
-    font-family: "Lexend", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
 }
 
 .uiButtons {
@@ -50,3 +57,66 @@ html {
     cursor: pointer;
 }
 
+.youAndOpp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#youAndOppBox {
+    position: absolute;
+    width: 1000px;
+    height: 450px;
+    background-color: rgb(73, 73, 73);
+    left: 22%;
+    top: 10%;
+    z-index: -1;
+    box-shadow: 15px 15px rgb(56, 56, 56);
+}
+
+#opponentArea {
+    position: absolute;
+    width: 250px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgb(224, 224, 224);
+    box-shadow: inset 15px 15px rgb(56, 56, 56);
+    left: 28%;
+    top: 15%;
+}
+
+
+#roundNarrator {
+    position: absolute;
+    font-size: 70px;
+    top: 32.5%;
+    right: 49.2%;
+    color: rgb(167, 167, 167);
+}
+
+#yourArea {
+    position: absolute;
+    width: 250px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgb(224, 224, 224);
+    box-shadow: inset 15px 15px rgb(56, 56, 56);
+    left: 55%;
+    top: 15%;
+}
+
+#opponentName {
+    position: absolute;
+    font-size: 40px;
+    top: 50%;
+    right: 63.6%;
+    color: rgb(167, 167, 167);
+}
+
+#yourName {
+    position: absolute;
+    font-size: 40px;
+    top: 50%;
+    right: 36.5%;
+    color: rgb(167, 167, 167);
+}
