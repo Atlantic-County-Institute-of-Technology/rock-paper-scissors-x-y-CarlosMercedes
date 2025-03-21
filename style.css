@@ -85,7 +85,6 @@ html {
     top: 15%;
 }
 
-
 #roundNarrator {
     position: absolute;
     text-align: center;
@@ -236,7 +235,7 @@ html {
     font-size: 30px;
     padding: 25px;
     bottom: 20px;
-    opacity: 0;
+    display: none;
 }
 
 #confirmButton:hover {
