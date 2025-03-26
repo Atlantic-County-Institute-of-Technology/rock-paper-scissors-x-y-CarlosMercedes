@@ -46,41 +46,41 @@ do {
 yourNameArea.textContent = yourName;
 
 //Opponent gets random name to give vision they are real
-window.onload = function randomizeOppName() {
-
     let randomName = Math.floor(Math.random() * 5) + 1
 
     if (randomName == 1) {
         oppText.textContent = "Peter"
         oppText.style.right = "63.1%"
+        randomName = "Peter"
     }
 
     if (randomName == 2) {
         oppText.textContent = "Robert"
         oppText.style.right = "62%"
+        randomName = "Robert"
     }
 
     if (randomName == 3) {
         oppText.textContent = "John"
         oppText.style.right = "63%"
+        randomName = "John"
     }
     
     if (randomName == 4) {
         oppText.textContent = "Jerry"
         oppText.style.right = "63.2%"
+        randomName = "Jerry"
     }
 
     if (randomName == 5) {
         oppText.textContent = "Alex"
         oppText.style.right = "63.6%"
+        randomName = "Alex"
     }
-}
-
-let randomName = 
 //Set player and AI wins
-roundNum.textContent = "Round : " + round
+roundNum.textContent = "Round: " + round
 userNum.textContent = yourName + "'s wins: " + userWins
-aiNum.textContent = "Opponent's wins: " + oppWins 
+aiNum.textContent = randomName + "'s wins: " + oppWins 
 
 //UI buttons
 resetNumber.addEventListener('click', function () {
@@ -89,7 +89,7 @@ resetNumber.addEventListener('click', function () {
     userWins = 0
     userNum.textContent = yourName + "'s wins: " + userWins
     oppWins = 0
-    aiNum.textContent = "Opponent's wins: " + oppWins 
+    aiNum.textContent = randomName + "'s wins: " + oppWins  
 })
 
 resetGameButton.addEventListener('click', function () {
@@ -150,7 +150,6 @@ let resultNarrator;
 confirmButton.addEventListener('click', function () {
 
     confirmButton.style.display = "none"
-    resetGameButton.style.display = "none"
     resetNumber.style.display = "none"
 
     rockButton.style.display = "none"
@@ -196,7 +195,7 @@ confirmButton.addEventListener('click', function () {
                 narrator.textContent = "Paper covers rock!"
                 yourArea.style.backgroundColor = "green"
                 userWins++;
-                aiNum.textContent = "Opponent's wins: " + oppWins 
+                userNum.textContent = yourName + "'s wins: " + userWins
                 opponentPicked = true
             }
 
@@ -204,7 +203,7 @@ confirmButton.addEventListener('click', function () {
                 narrator.textContent = "Rock breaks scissors!"
                 oppArea.style.backgroundColor = "green"
                 oppWins++;
-                aiNum.textContent = "Opponent's wins: " + oppWins 
+                aiNum.textContent = randomName + "'s wins: " + oppWins  
                 opponentPicked = true 
             }
 
@@ -221,7 +220,7 @@ confirmButton.addEventListener('click', function () {
                 narrator.textContent = "Rock smashes lamp!"
                 oppArea.style.backgroundColor = "green"
                 oppWins++;
-                aiNum.textContent = "Opponent's wins: " + oppWins 
+                aiNum.textContent = randomName + "'s wins: " + oppWins  
                 opponentPicked = true
             }
 
@@ -229,7 +228,7 @@ confirmButton.addEventListener('click', function () {
                 narrator.textContent = "Paper covers rock!"
                 oppArea.style.backgroundColor = "green"
                 oppWins++;
-                aiNum.textContent = "Opponent's wins: " + oppWins 
+                aiNum.textContent = randomName + "'s wins: " + oppWins  
                 opponentPicked = true
             }
 
@@ -252,7 +251,7 @@ confirmButton.addEventListener('click', function () {
                 narrator.textContent = "Paper engulfs paperclip!"
                 oppArea.style.backgroundColor = "green"
                 oppWins++;
-                aiNum.textContent = "Opponent's wins: " + oppWins 
+                aiNum.textContent = randomName + "'s wins: " + oppWins  
                 opponentPicked = true
             }
 
@@ -276,7 +275,7 @@ confirmButton.addEventListener('click', function () {
                 narrator.textContent = "Scissors cut paper!"
                 oppArea.style.backgroundColor = "green"
                 oppWins++;
-                aiNum.textContent = "Opponent's wins: " + oppWins 
+                aiNum.textContent = randomName + "'s wins: " + oppWins  
                 opponentPicked = true
             }
 
@@ -300,7 +299,7 @@ confirmButton.addEventListener('click', function () {
                 narrator.textContent = "Scissors cuts lamp cord!"
                 oppArea.style.backgroundColor = "green"
                 oppWins++;
-                aiNum.textContent = "Opponent's wins: " + oppWins 
+                aiNum.textContent = randomName + "'s wins: " + oppWins   
                 narrator.style.lineHeight = "35px"
                 opponentPicked = true
             }
@@ -309,7 +308,7 @@ confirmButton.addEventListener('click', function () {
                 narrator.textContent = "Paperclip puts up a fight!"
                 oppArea.style.backgroundColor = "green"
                 oppWins++;
-                aiNum.textContent = "Opponent's wins: " + oppWins 
+                aiNum.textContent = randomName + "'s wins: " + oppWins  
                 narrator.style.lineHeight = "35px"
                 opponentPicked = true
             }
@@ -326,7 +325,7 @@ confirmButton.addEventListener('click', function () {
                 narrator.textContent = "Paperclip clips scissors closed!"
                 oppArea.style.backgroundColor = "green"
                 oppWins++;
-                aiNum.textContent = "Opponent's wins: " + oppWins 
+                aiNum.textContent = randomName + "'s wins: " + oppWins  
                 narrator.style.lineHeight = "35px"
                 opponentPicked = true
             }
@@ -358,7 +357,7 @@ confirmButton.addEventListener('click', function () {
                 narrator.textContent = "Lamp burns paper!"
                 oppArea.style.backgroundColor = "green"
                 oppWins++;
-                aiNum.textContent = "Opponent's wins: " + oppWins 
+                aiNum.textContent = randomName + "'s wins: " + oppWins   
                 opponentPicked = true
             }
 
@@ -375,7 +374,7 @@ confirmButton.addEventListener('click', function () {
                 narrator.textContent = "Lamp rusts paperclp!"
                 oppArea.style.backgroundColor = "green"
                 oppWins++;
-                aiNum.textContent = "Opponent's wins: " + oppWins 
+                aiNum.textContent = randomName + "'s wins: " + oppWins  
                 opponentPicked = true
             }
 
@@ -390,26 +389,26 @@ confirmButton.addEventListener('click', function () {
                 newGameButton.style.display = "block"
             }
 
-            newGameButton.addEventListener("click", function() {
-                round++;
-                roundNum.textContent = "Round : " + round
-                resetGameButton.style.display = "block"
-                resetNumber.style.display = "block"
-
-                rockButton.style.display = "block"
-                paperButton.style.display = "block"
-                scissorsButton.style.display = "block"
-                paperclipButton.style.display = "block"
-                lampButton.style.display = "block"
-                newGameButton.style.display = "none"
-
-                yourArea.style.backgroundColor = "white"
-                oppArea.style.backgroundColor = "white"
-
-                yourArea.textContent = ""
-                oppArea.textContent = ""
-            })
         }
     timeoutID = setTimeout(aiPickRandom, opponentPickWait);
 
 }) 
+
+newGameButton.addEventListener("click", function() {
+    round++;
+    roundNum.textContent = "Round: " + round
+    resetNumber.style.display = "block"
+
+    rockButton.style.display = "block"
+    paperButton.style.display = "block"
+    scissorsButton.style.display = "block"
+    paperclipButton.style.display = "block"
+    lampButton.style.display = "block"
+    newGameButton.style.display = "none"
+
+    yourArea.style.backgroundColor = "white"
+    oppArea.style.backgroundColor = "white"
+
+    yourArea.textContent = ""
+    oppArea.textContent = ""
+})

@@ -116,6 +116,9 @@ html {
     right: 48.2%;
     color: rgb(167, 167, 167);
     box-shadow: inset 7px 7px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #yourArea {
